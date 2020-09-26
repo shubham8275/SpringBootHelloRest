@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: com.code.test.ProductControllerTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 18.351 s <<< FAILURE! - in com.code.test.ProductControllerTest
+addTest  Time elapsed: 0.483 s  <<< FAILURE!
+java.lang.AssertionError: expected:<> but was:<3>
+	at com.code.test.ProductControllerTest.addTest(ProductControllerTest.java:49)
+
+updateTest  Time elapsed: 0.051 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[]> but was:<[Product is updated successfully]>
+	at com.code.test.ProductControllerTest.updateTest(ProductControllerTest.java:65)
+
+deleteTest  Time elapsed: 0.056 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.orm.ObjectOptimisticLockingFailureException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; statement executed: HikariProxyPreparedStatement@1292576622 wrapping com.mysql.cj.jdbc.ClientPreparedStatement: delete from product where id=10; nested exception is org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; statement executed: HikariProxyPreparedStatement@1292576622 wrapping com.mysql.cj.jdbc.ClientPreparedStatement: delete from product where id=10
+	at com.code.test.ProductControllerTest.deleteTest(ProductControllerTest.java:70)
+Caused by: org.springframework.orm.ObjectOptimisticLockingFailureException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; statement executed: HikariProxyPreparedStatement@1292576622 wrapping com.mysql.cj.jdbc.ClientPreparedStatement: delete from product where id=10; nested exception is org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; statement executed: HikariProxyPreparedStatement@1292576622 wrapping com.mysql.cj.jdbc.ClientPreparedStatement: delete from product where id=10
+	at com.code.test.ProductControllerTest.deleteTest(ProductControllerTest.java:70)
+Caused by: org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; statement executed: HikariProxyPreparedStatement@1292576622 wrapping com.mysql.cj.jdbc.ClientPreparedStatement: delete from product where id=10
+	at com.code.test.ProductControllerTest.deleteTest(ProductControllerTest.java:70)
+
