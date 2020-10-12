@@ -44,7 +44,6 @@ public class ProductControllerTest extends AbstractTest {
         int status = mvcResult.getResponse().getStatus();
         assertEquals(201, status);
         String content = mvcResult.getResponse().getContentAsString();
-        System.out.println("Content is *********: +++++++++++++++++++++");
         System.out.println(content);
         assertEquals(content, product.getId());
     }
