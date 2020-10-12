@@ -52,7 +52,7 @@ public class ProductControllerTest extends AbstractTest {
     public void updateTest() throws Exception {
         String uri = "/products/6";
         Product product = new Product();
-        product.setName("Ipods");
+        product.setName("Iphone");
         product.setPrice(2000);
         String inputJson = super.mapToJson(product);
         MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.put(uri)
