@@ -17,6 +17,7 @@ public class ProductControllerTest extends AbstractTest {
     public void setUp() {
         super.setUp();
     }
+
     @Test
     public void listTest() throws Exception {
         String uri = "/products";
@@ -29,6 +30,7 @@ public class ProductControllerTest extends AbstractTest {
         Product[] productList = super.mapFromJson(content, Product[].class);
         assertTrue(productList.length > 0);
     }
+
     @Test
     public void addTest() throws Exception {
         String uri = "/products";
@@ -44,6 +46,7 @@ public class ProductControllerTest extends AbstractTest {
         int status = mvcResult.getResponse().getStatus();
         assertEquals(201, status);
     }
+
     @Test
     public void updateTest() throws Exception {
         String uri = "/products/6";
@@ -58,6 +61,7 @@ public class ProductControllerTest extends AbstractTest {
         int status = mvcResult.getResponse().getStatus();
         assertEquals(200, status);
     }
+
     @Test
     public void deleteTest() throws Exception {
         String uri = "/products/32";
